@@ -1,5 +1,6 @@
 ## Autosave files
 *.tex~
+.gitignore~
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
