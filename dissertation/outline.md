@@ -4,8 +4,12 @@ Alage droplets
 Bacteria droplets
 
 
-Introduction and Background
+1. Introduction and Background
 ----------
+
+oxygen (mirror O2 Review and 3D printed 24 well device)
+
+1.1 Need and motovation for oxygen control
 
 Oxygen control with microfuildic platforms
   - biological role of oxygen
@@ -16,6 +20,19 @@ Oxygen control with microfuildic platforms
 
 Additive Manufactuing
   - Open source Scientific devices
+
+2. Materials and Methods
+------------
+
+3. Results
+-----------
+
+4. Disscussion
+-----------
+
+V. Conclusion
+----------
+
 
 
 
