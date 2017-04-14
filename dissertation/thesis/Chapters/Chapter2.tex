@@ -36,19 +36,6 @@ Thin film sensors were cut and fixed to the bottom of each well with PDMS.
  to each well in the network we
 One central input branches to central input that equalizes the flow along each path length by varying the channel width to the proximal, intermediate, and distal wells (Fig 1). 
 
-%-----------------------------------
-%	SUBSECTION 1
-%-----------------------------------
-\subsection{Subsection 1}
-
-Nunc posuere quam at lectus tristique eu ultrices augue venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Vivamus sodales tortor eget quam adipiscing in vulputate ante ullamcorper. Sed eros ante, lacinia et sollicitudin et, aliquam sit amet augue. In hac habitasse platea dictumst.
-
-%-----------------------------------
-%	SUBSECTION 2
-%-----------------------------------
-
-\subsection{Subsection 2}
-Morbi rutrum odio eget arcu adipiscing sodales. Aenean et purus a est pulvinar pellentesque. Cras in elit neque, quis varius elit. Phasellus fringilla, nibh eu tempus venenatis, dolor elit posuere quam, quis adipiscing urna leo nec orci. Sed nec nulla auctor odio aliquet consequat. Ut nec nulla in ante ullamcorper aliquam at sed dolor. Phasellus fermentum magna in augue gravida cursus. Cras sed pretium lorem. Pellentesque eget ornare odio. Proin accumsan, massa viverra cursus pharetra, ipsum nisi lobortis velit, a malesuada dolor lorem eu neque.
 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
@@ -93,7 +80,7 @@ This hour incubation step dilutes the inducer inactivating it and allows the gen
 \subsection{Plating and assaying for Drug Resistance}
 
 Suspensions were diluted in more CAT media for anticipated survivor counts.
-Typically suspensions were diluted by 100000 for single drug, 100 for two drug agar, and 10 for triple drug agar.
+Typically suspensions were diluted by 100,000 for single drug, 100 for two drug agar, and 10 for triple drug agar.
 Agar was made from either CAT medium or THY medium by adding 4.5 g of agar per 300 mL of medium and autoclaving.
 50 mm plates are filled with the following layers in order: 
 
@@ -108,3 +95,36 @@ Layers are added at least a few minutes apart to allow them to set before the ne
 Plates are incubated at in a 37$^{\circ}$C room for 48 hours before counting.
 Plates are incubated upside down to slow the diffusion of drug to the cell layer.
 Concentrations in the drug layer are listed in Appendix \ref{AppendixA} Table \ref{table_drug-agar}.
+
+\section{Droplet Generation and Cell Encapsulation}
+
+A microfluidic droplet generating device was used to encapsulate cells during transformation.
+A flow focusing device with two aqueous inlets was used to keep the cells and inducer separate until right before droplet generation.
+
+\subsection{Fabrication of Droplet Generating Device}
+
+\textbf{Master mold fabrication.} A 2D design was made in AutoCad and exported as a DFX format.
+Small features such as as the filter arrays were saved in a separate file and then subtracted via boolean operation in LinkCAD.
+SU-8 2015 (MicroChem Corp.) was spun at 4500 RPM on a 100 mm silicon wafer to a thickness of 15 $\mu$.
+The wafer was baked at 95$^{\circ}$C for 10 minutes shielded from light.
+The wafer was loaded into the $\mu$PG 101 (Heilderberg Instruments).
+The converted file from LinkCAD was imported into the $\mu$PG 101 software.
+The wafer was exposed at 18 MW, 100\% intensity and 4x exposure time.
+After exposure the wafer was baked at 95$^{\circ}$C for 10 minutes and then at 120$^{\circ}$C for 30 minutes.
+I found that this additional bake at 120$^{\circ}$C prevented de-lamination that is typical for SU-8 heights less than 50 $\mu$m.
+The uncured SU-8 was then washed away with SU-8 developer (MicroChem Corp.) on a shaker for 30 minutes.
+The wafer was then rinsed with acetone followed by IPA and blown dry with nitrogen.
+
+\textbf{Casting, assembly and treatment of device.} About 30 grams of 10:1 monomer to curing agent PDMS was mixed with a Thinky mixer for 2 minutes.
+About 10 grams of mixed PDMS was poured onto the master mold and spun at 2000 RPM.
+A 22 x 50 mm glass cover slip was layed on the uncured PDMS.
+The mold was placed in a vacuum desiccator to pull air bubbles from under the cover slip.
+The cover slip was then adjusted to be over the incubation chamber of the design and baked at 65$^{\circ}$C to set in place.
+The remaining PDMS, ~20 grams, is poured on the mold and degassed.
+The mold is then baked at 65$^{\circ}$C for 2 hours.
+The PDMS is then carefully pealed from the mold containing the embedded cover slip.
+Holes are punched with a 1 mm biopsy punch and the PDMS is placed in contact with a glass slide after 45 seconds of oxygen plasma exposure (Plasma Etch, Inc.) to permanently bond.
+The completed chip is then baked at 135$^{\circ}$C for at least 1 hour to strengthen plasma bonding.
+The chip is then removed and allowed to cool before treating with hydrophobic coating.
+Novec 1720 (3M) is flowed through the device and then left to stand for 10 minutes.
+The Novec is then flushed from the device with air and returned to a 135$^{\circ}$C hot plate to bake in the coating.
