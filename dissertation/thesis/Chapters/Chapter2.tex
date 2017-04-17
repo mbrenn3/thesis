@@ -28,14 +28,51 @@ Membranes were transfered to a transparency and placed over a cutting template a
 To attach the membranes to the 3D printed part, a small amount of PDMS was applied to the membranes and spread thin to act as a mortar.
 The membranes were left in place to cure overnight.
 
+\subsection{Flow set-up}
+Flow though the device was driven by vacuum with a ventri sink aspirator.
+This vacuum line was split evenly into four and connected to each outlet.
+The inlet gas was from pressurized tanks of either 0\% \ce{O2}, 5\% \ce{O2}, 7.5\% \ce{O2}, or 21\% \ce{O2}.
+Each gas tank was also 5\% \ce{CO2} for \ce{CO2} buffered medium.
+Each pressurized tank had a multistage cylinder regulator as well as an in-line IV flow regulator.
+An open connection was made in the lines leading to the inlet by placing tubing from the IV regulator into the wide end of a 1000 $\mu$L pipette tip.
+The narrow end of the pipette tip was connected to tubing from the inlet barbs of the insert.
+Flow from the pressurized tank was set to exceed the flow of the vacuum so that gas was drawn from the tank condition.
+Flow allowed by the IV flowmeter in each of the four inlet lines was measured by temporarily diverting the flow with a three-way stopcock to a floating ball rotameter(Figure (IV flow meters)).
+
 \subsection{Oxygen Characterization}
 PtOEPK (Pt(II) Octaethylporphine ketone) sensors were created by spinning thin films from a PtOEPK in polystyrene-toluene solution.
-Thin film sensors were cut and fixed to the bottom of each well with PDMS.
+Thin film sensors were cut and fixed to the bottom of each well of a 24-well with PDMS.
+An oxygen scavenger solution was made by dissolving \ce{Na2SO3} in DI water at 2 g/L.
+The wells were filled with the oxygen scavenger solution and the insert device was placed in the plate.
+5\% \ce{CO2}, balanced \ce{N2} was flowed through the device to flush out any oxygen.
+The intensity of the PtOEPK sensor was measured via epi-fluorescence imaging (Olympus XI-51).
+A filter cube of with ex/em was used.
+When the intensity stabilized images of all the sensors were taken.
+A motorized stage and imaging control software (metamorph) was used to memorize positions of all the wells.
+Each well was imaged sequentially in a 1-6, 12-7, 13-18, 24-19, order to minimize the distance and time the stage had to travel.
+These intensity values were considered 0\% oxygen and taken as the calibration point.
+The plate was removed from the microscope and the insert was taken out and both the plate and insert were rinsed in DI water to wash away all the scavenger solution.
+DI water that was equilibrated to room temperature and atmospheric air (by placing in an open container overnight in the microscope room) was used to fill the wells.
+With the insert placed in the plate and 5\% \ce{CO2}, balanced \ce{N2} was flowed through the device until the intensity stabilized (~45 minutes).
+The 5\% \ce{CO2}, 5\% \ce{O2}, balanced \ce{N2} was flowed through the device.
+When the intensity stabilized a calibration point was taken that was considered 5\% \ce{O2}.
+Next 5\% \ce{CO2}, 10\% \ce{O2}, balanced \ce{N2} was flowed through the device and the 10\% calibration point was taken.
+Finally the water in the plate was replaced again and 5\% \ce{CO2}, balanced air was flowed through the device.
+
+\textbf{Timecourse Oxygen Characterization Data Collection:} 
+Each well was imaged sequentially at intervals of 5 minutes for a total time of 6 hours.
+After 15 minutes of 5\% \ce{CO2}, balanced air (Three time points), the inlets were changed to: row 1: 5\% \ce{CO2} balanced \ce{N2}; row 2: 5\% \ce{CO2}, 5\% \ce{O2} balanced \ce{N2}; row 3: 5\% \ce{O2}, 10\% \ce{O2}, balance \ce{N2}; row 4: 5\% \ce{CO2} balanced air.
+Summarized in table (Oxygen characterization rows)
+
+\subsection{Analyzing Intensities}
+ImageJ was used to organize images according to meta data into folders of wells including specifying calibration points.
+Then imageJ was used to measure intensity of each image from the time course data which was recorded into a text file for each well (Imagej macros can be found in appendix (code)).
+A two-site Stern-Volmer model was used to interpret the intensity data and generate oxygen values (Matlab code can be found in Appendix (code)).
 
 
- to each well in the network we
-One central input branches to central input that equalizes the flow along each path length by varying the channel width to the proximal, intermediate, and distal wells (Fig 1). 
 
+
+    
 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
@@ -105,17 +142,17 @@ A flow focusing device with two aqueous inlets was used to keep the cells and in
 
 \textbf{Master mold fabrication.} A 2D design was made in AutoCad and exported as a DFX format.
 Small features such as as the filter arrays were saved in a separate file and then subtracted via boolean operation in LinkCAD.
-SU-8 2015 (MicroChem Corp.) was spun at 4500 RPM on a 100 mm silicon wafer to a thickness of 15 $\mu$.
+SU-8 2015 (MicroChem Corp.) was spun at 4250 RPM on a 100 mm silicon wafer to a thickness of 15 $\mu$.
 The wafer was baked at 95$^{\circ}$C for 10 minutes shielded from light.
 The wafer was loaded into the $\mu$PG 101 (Heilderberg Instruments).
 The converted file from LinkCAD was imported into the $\mu$PG 101 software.
-The wafer was exposed at 18 MW, 100\% intensity and 4x exposure time.
+The wafer was exposed at 18 mW, 100\% intensity and 4x exposure time.
 After exposure the wafer was baked at 95$^{\circ}$C for 10 minutes and then at 120$^{\circ}$C for 30 minutes.
 I found that this additional bake at 120$^{\circ}$C prevented de-lamination that is typical for SU-8 heights less than 50 $\mu$m.
 The uncured SU-8 was then washed away with SU-8 developer (MicroChem Corp.) on a shaker for 30 minutes.
 The wafer was then rinsed with acetone followed by IPA and blown dry with nitrogen.
 
-\textbf{Casting, assembly and treatment of device.} About 30 grams of 10:1 monomer to curing agent PDMS was mixed with a Thinky mixer for 2 minutes.
+\textbf{Casting, assembly and treatment of device.} About 30 grams of 10:1 monomer : curing-agent, PDMS (Slygard 184, Dow Corning) was mixed with a Thinky mixer for 2 minutes.
 About 10 grams of mixed PDMS was poured onto the master mold and spun at 2000 RPM.
 A 22 x 50 mm glass cover slip was layed on the uncured PDMS.
 The mold was placed in a vacuum desiccator to pull air bubbles from under the cover slip.
@@ -127,4 +164,44 @@ Holes are punched with a 1 mm biopsy punch and the PDMS is placed in contact wit
 The completed chip is then baked at 135$^{\circ}$C for at least 1 hour to strengthen plasma bonding.
 The chip is then removed and allowed to cool before treating with hydrophobic coating.
 Novec 1720 (3M) is flowed through the device and then left to stand for 10 minutes.
-The Novec is then flushed from the device with air and returned to a 135$^{\circ}$C hot plate to bake in the coating.
+The Novec is then flushed from the chip with air and returned to a 135$^{\circ}$C hot plate to bake in the coating and sterilize the chip for at least 30 minutes.
+
+\subsection{Droplet generation and Cell Encapsulation}
+
+The droplet generation chip uses a flow focusing design to make water-in-oil droplets (w/o).
+The Oil and aqueous channels converge at a narrow neck where the aqueous-oil interface is focused causing droplets to pinch off in a size determined by the neck width(Figure schematic of device layout).
+FC-40 oil with 2\% (v/v) surfactant (Pico-Surf 1, Dolomite) is the continuous phase.
+FC-40 is a fluorinated oil that is preferred for biological applications.
+It has a low viscosity and is denser that water.
+For testing water with 1 $\mu$m fluorescent beads is used for the dispersed phase.
+For transformation studies cells suspended in M9 media and inducer is used.
+The droplet encapsulation procedure is preformed in a cold room to keep the cells inactivated until the desired amount of emulsion is produced(Figure (cold room set-up)).
+Depending on the experiment and chip design emulsion may be stored in off-chip tubing or can be incubated on-chip.
+Flow is driven with a two syringe pumps (model, brand), one for the oil syringe and one that drives both aqueous syringes.
+1 m syringes (BD Biosciences) with blunted 21 gauge hypodermic needles and PTFE tubing was used.
+With the syringe and tubing primed the tubing is inserted into the inlet ports.
+The aqueous pump is started first at a flow rate of 50 $\mu$L/h.
+The droplet generating chip is observed through a bench-top microscope.
+When the aqueous channels begin making progress towards the droplet generating neck the pump with the oil syringe is started at 90 $\mu$L/h.
+As the flows equilibrate droplets should begin forming.
+The aqueous flow rate can then be reduced to 15 $\mu$L/h for the remainder of droplet formation.
+Droplet formation can continue until the hydrophobic surface becomes fouled or debris block the neck.
+
+\subsection{Emulsion Breaking}
+
+After transformation cells are released from the droplets into a bulk suspension for plating.
+
+\begin{enumerate}
+	\item After transferring the emulsion to a micro centrifuge tube 200 $\mu$L CAT medium was added
+	\item The tube was Spun down at 100 RCF for 30 s
+	\item The separated oil was pipetted out from the bottom.
+	\item 400 $\mu$L of de-emulsifying agent (Pico-Break, Dolomite) was added.
+	\item The tube was spun down again for at 1000 RCF for 1 minute.
+	\item Finally the cells suspended in media are pipetted off the top of the de-emulsifying agent.
+\end{enumerate}
+
+The amount of media volume in emulsion is estimated based on the packing efficiency of spheres in a sheet.
+The highest volume ratio of of droplets is ~70\%.
+The volume of holding chamber is 8 $\mu$L, so fully packed the volume of aqueous phase is 5.6 $\mu$L.
+The volume of suspension that is recovered is assumed to be ~4 $\mu$L.
+The recovered suspension is brought up to 400 $\mu$L an considered to be diluted to by 100.
