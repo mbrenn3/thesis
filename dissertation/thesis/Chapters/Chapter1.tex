@@ -15,18 +15,19 @@
 Oxygen makes up approximately 21\% of the atmospheric air that enters the lung, yet most tissues of the body experience significantly less.
 Normoxia is the range of oxygen levels that tissues experience in a healthy system.
 Within the body oxygen levels vary depending on the specific tissue.
-Oxygen levels in lung alveoli are ~13\%, yet different regions of the brain can range from 7\% to less than 1\% (A list of reported oxygen levels can be found in Table oxygen_in_tissues).
-Despite normoxia for most tissues being far below 21\% culture studies are typically done at atmospheric levels which is actually hyperoxic which is above physiological oxygen conditions.
-
-Tissue oxygenation is a constant balancing act between oxygen availability and oxygen consumption.
-Small changes in oxygen levels trigger homeostasis responses in cells and tissues.
-
-
+Oxygen levels in lung alveoli are ~13\%, yet different regions of the brain can range from 7\% to less than 1\% (A list of reported oxygen levels can be found in Table oxygen in tissues).
+Despite the fact that normoxia for most tissues is far below 21\%, culture studies are typically done at atmospheric levels. This is in effect hyperoxic, which is above physiological oxygen conditions.
 
 %-----------------------------------
 %	SUBSECTION 1
 %-----------------------------------
 \subsection{Hypoxia inducible factor}
+
+Tissue oxygenation is a constant balancing act between oxygen availability and oxygen consumption.
+Small changes in oxygen levels trigger homeostasis responses in cells and tissues.
+Research has found that hypoxia induces extensive alterations in gene expression.
+The hypoxia inducible factor (HIF) family of transcription factors have been shown to activate as oxygen levels fall and the work to regulate gene expression that promotes glycolysis, angiogenesis.
+ 
 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
@@ -34,7 +35,32 @@ Small changes in oxygen levels trigger homeostasis responses in cells and tissue
 
 \section{Measurement of oxygen}
 
+To investigate the effects of oxygen on biological systems one first needs to find a suitable method for measuring it. Measuring oxygen in the cell environment is even more challenging if temporal and spatial requirements are strict. Stoichiometric methods such as the Winkler method \cite{winkler1888} are too slow and require fixing of samples.
+
+\subsection{Clark-style electrodes}
+
+Clark-style electrodes \cite{Clark1953} typically use a platinum working electrode and silver chloride reference electrode with potassium chloride for the electrolyte.
+A voltage of about 800 mV, which is sufficient to reduce oxygen, is applied across the electrodes.
+Oxygen is reduced at the working electrode, thus producing electrons or current proportional to the amount of oxygen present.
+The electrodes and electrolyte are protected behind a gas-permeable layer of polytetrafluoroethylene (PTFE) to prevent adsorption of proteins or interfering ions from fouling the electrodes.
+Because Clark-style electrodes consume oxygen in order to detect it, stirring of the sample is usually required for fast response measurements.
+The electrode is also very sensitive to changes in sample temperature.
+Clark electrodes are unreliable for long-term measurements for a number of reasons which contribute to unstable readings: depletion of the electrolyte, the production of \ce{OH-} ions affecting the pH causing zero drift, and the anode becoming coated in \ce{AgCl}.
+If used with biological samples, the protective, PTFE membrane will also lose permeability over time due to the adsorption of protein and other residues.
+Clark-style electrodes also suffer from low temporal and spatial resolution due to the time it takes for oxygen to diffuse across the PTFE membrane and to the electrodes.
+In addition, the relative size of these probes (~3+ mm diameter probe) makes interfacing with microfluidic channels problematic.
+
+\subsection{Optical Oxygen Sensors}
+
+Formicrofluidic systems, optical oxygen sensors are the tool of choice. They have several advantages overClark-style electrodes. They do not consume oxygen so they can be used in low or no flow environments and do not suffer from fouling, making them stable for long-term studies. Where Clark electrodes require an electrical connection to each position to bemeasured and only provide a single, low spatial resolutionmeasurement, optical sensors allowmeasurement over the entire area of the sensor and at any number of discrete points. These sensors take advantage of oxygen-indicating fluoro-
+phores that are quenched in the presence of oxygen. The degree of quenching is determined by the oxygen partial pressure. The relationship between intensity and oxygen partial pres- sure is described by the Stern–Volmer equation:
+
+equation
+
+
+
 \section{Methods for Global Oxygen Control and Measurement}
+
 
 
 \subsection{Subsection 1}
